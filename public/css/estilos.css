@@ -1,0 +1,163 @@
+/* Fondo animado */
+.animated-bg {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #43cea2, #3b6997, #198754, #d1d1cd);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Títulos */
+.animated-title,
+.titulo-futbolapp,
+.trofeo-titulo {
+    color: #0cd366;
+    font-weight: bold;
+    text-shadow: 1px 2px 8px rgba(247, 246, 246, 0.1);
+}
+.animated-title { animation: bounceIn 1.2s; }
+@keyframes bounceIn {
+    0% { transform: scale(0.7); opacity: 0; }
+    60% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+.trofeo-titulo { filter: drop-shadow(0 2px 6px #10b3a588); }
+
+/* Tarjetas */
+.card-efecto {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.93);
+}
+.card-efecto:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+}
+
+/* Header */
+.bg-gradient-header {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    border-radius: 18px;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    padding: 20px 0;
+    background: #f8f9fa;
+    color: #0e0d0d;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+    font-size: 0.95rem;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Botones personalizados */
+.btn-custom {
+    background: linear-gradient(90deg, #1e809e 60%, #2dbd8f 100%);
+    color: #fff;
+    border-radius: 20px;
+    transition: background 0.2s, transform 0.2s;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(20, 20, 20, 0.15);
+}
+.btn-custom:hover {
+    background: linear-gradient(90deg, #43cea2 0%, #198754 100%);
+    color: #fff;
+    transform: scale(1.07);
+}
+
+/* Botón editar */
+.btn-edit {
+    background: linear-gradient(90deg, #1abeca 0%, #37f5fc 100%);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding: 0.45rem 1rem;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(255, 174, 81, 0.15);
+}
+.btn-edit:hover {
+    background: linear-gradient(90deg, #ffa751 0%, #ffe259 100%);
+    color: #fff;
+    transform: scale(1.08);
+}
+
+/* Botón eliminar */
+.btn-delete {
+    background: linear-gradient(90deg, #d34949 0%, #c91a6e 100%);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding: 0.45rem 1rem;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(248, 87, 166, 0.15);
+}
+.btn-delete:hover {
+    background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
+    color: #fff;
+    transform: scale(1.08);
+}
+
+/* Tablas generales */
+.tabla-presidentes tbody tr,
+.tabla-equipos tbody tr,
+.tabla-jugadores tbody tr,
+.tabla-juegos tbody tr {
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.tabla-presidentes tbody tr:hover {
+    background: #06d1b6;
+    box-shadow: 0 2px 12px rgba(67, 206, 162, 0.12);
+    cursor: pointer;
+}
+.tabla-equipos tbody tr:hover,
+.tabla-jugadores tbody tr:hover,
+.tabla-juegos tbody tr:hover {
+    background: #e6fff5;
+    box-shadow: 0 2px 12px rgba(67, 206, 162, 0.12);
+    cursor: pointer;
+}
+
+.btn-view {
+    background: linear-gradient(90deg, #059185 0%, #0d63b9 100%);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding: 0.45rem 1rem;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(67, 206, 162, 0.15);
+}
+.btn-view:hover {
+    background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+    color: #fff;
+    transform: scale(1.08);
+}
+/* Tarjeta colorida para presidentes */
+.bg-president-card {
+    background: linear-gradient(135deg, #e0ffe8 0%, #b2f0e6 100%);
+}
+
+.bg-team-card {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+}
+.bg-player-card {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+}
+.bg-game-card {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+}
+.bg-goal-card {
+    background: linear-gradient(135deg, #f3ffe0 0%, #b2ebf2 100%);
+}
