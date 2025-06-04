@@ -9,19 +9,19 @@ use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
-    // Página principal del sitio
+    
     public function index()
     {
         return view('inicio.principal');
     }
 
-    // Mostrar formulario de registro
+    
     public function showRegister()
     {
         return view('inicio.register');
     }
 
-    // Registrar usuario
+
     public function register(Request $request)
     {
         $request->validate([
@@ -40,13 +40,13 @@ class HomeController extends Controller
         return redirect()->route('home');
     }
 
-    // Mostrar formulario de login
+
     public function showLogin()
     {
         return view('inicio.login');
     }
 
-    // Iniciar sesión
+
     public function login(Request $request)
     {
         $credentials = $request->validate([
@@ -64,7 +64,6 @@ class HomeController extends Controller
         ])->onlyInput('email');
     }
 
-    // Cerrar sesión
     public function logout(Request $request)
     {
         Auth::logout();

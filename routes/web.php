@@ -14,31 +14,29 @@ use App\Http\Controllers\HomeController;
 
 //Route::get('/consultas', [OrmController::class, 'consultas']);
 
-// Página principal pública
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Rutas públicas (login, registro, logout)
+
 Route::get('login', [HomeController::class, 'showLogin'])->name('login');
 Route::post('login', [HomeController::class, 'login']);
 Route::get('register', [HomeController::class, 'showRegister'])->name('register');
 Route::post('register', [HomeController::class, 'register']);
 Route::post('logout', [HomeController::class, 'logout'])->name('logout');
 
-// Rutas protegidas (solo autenticados)
+
 Route::middleware('auth')->group(function () {
-    // Presidentes
+
     Route::resource('presidents', PresidentController::class);
-    // Equipos
+
     Route::resource('teams', TeamController::class);
-    // Jugadores
+    
     Route::resource('players', PlayerController::class);
-    // Partidos
+
     Route::resource('games', GameController::class);
-    // Goles
+    
     Route::resource('goals', GoalController::class);
 });
-
-//rutas de team
 
 Route::get('teams', [TeamController::class, 'index'])->name('teams.index');
 Route::get('team/create', [TeamController::class, 'create'])->name('teams.create');

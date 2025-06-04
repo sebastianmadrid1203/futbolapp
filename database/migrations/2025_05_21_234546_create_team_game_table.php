@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('team_game', function (Blueprint $table) {
             $table->id();
-              // FK a teams
+              
     $table->unsignedBigInteger('team_id');
     $table->foreign('team_id')
           ->references('id')
@@ -21,7 +21,7 @@ return new class extends Migration
           ->onDelete('cascade')
           ->onUpdate('cascade');
 
-    // FK a games
+    
     $table->unsignedBigInteger('game_id');
     $table->foreign('game_id')
           ->references('id')

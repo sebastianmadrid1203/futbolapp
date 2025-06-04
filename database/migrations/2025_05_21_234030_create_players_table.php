@@ -16,7 +16,7 @@ return new class extends Migration
      $table->string('name');
     $table->string('position');
 
-    // FK a teams
+
     $table->unsignedBigInteger('team_id');
     $table->foreign('team_id')
           ->references('id')

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('capacity');
              $table->year('year_of_foundation');
 
-    // FK a presidents (forma detallada)
+
           $table->unsignedBigInteger('president_id');
            $table->foreign('president_id')
           ->references('id')

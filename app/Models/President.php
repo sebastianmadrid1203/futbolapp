@@ -10,6 +10,6 @@ class President extends Model
 
     public function teams()
     {
-        return $this->hasMany(Team::class);
+        return $this->hasOne(Team::class);
     }
 }

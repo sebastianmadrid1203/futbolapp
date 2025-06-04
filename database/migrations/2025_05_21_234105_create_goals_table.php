@@ -16,7 +16,7 @@ return new class extends Migration
     $table->string('name');
     $table->text('description');
 
-    // FK a players
+    
     $table->unsignedBigInteger('player_id');
     $table->foreign('player_id')
           ->references('id')
@@ -24,7 +24,7 @@ return new class extends Migration
           ->onDelete('cascade')
           ->onUpdate('cascade');
 
-    // FK a games
+    
     $table->unsignedBigInteger('game_id');
     $table->foreign('game_id')
           ->references('id')
